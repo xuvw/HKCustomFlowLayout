@@ -26,4 +26,4 @@ Then, run the following command:
 $ pod install
 ```
 
-![image](https://github.com/xuvw/HKCustomFlowLayout/blob/master/HKCustomFlowLayout.gif =375)
+![image](https://github.com/xuvw/HKCustomFlowLayout/blob/master/HKCustomFlowLayout.gif =375x)
