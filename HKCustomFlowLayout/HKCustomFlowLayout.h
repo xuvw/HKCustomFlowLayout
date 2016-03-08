@@ -22,6 +22,19 @@
 
 @interface HKCustomFlowLayout : UICollectionViewLayout
 
+/*
+ default:{5,5,5,5}
+ */
+@property (nonatomic, assign) UIEdgeInsets   sectionInset;
+/*
+ default:5
+ */
+@property (nonatomic, assign) CGFloat        minimumLineSpacing;
+/*
+ default:5
+ */
+@property (nonatomic, assign) CGFloat        minimumInteritemSpacing;
+
 @property (nonatomic, weak) id<HKCustomFlowLayoutDelegate> delegate;
 
 @end

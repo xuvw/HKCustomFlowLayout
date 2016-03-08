@@ -49,7 +49,8 @@
  代理先返回原始值，layout根据情况进行调整
  */
 - (CGSize)hk_collectionView:(UICollectionView *)collectionView sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat width = 40 + arc4random()%40;
+    CGRect rt = collectionView.bounds;
+    CGFloat width = (rt.size.width -(2+4)*5)/5.0;//40 + arc4random()%40;
     CGFloat height = 30;
     return CGSizeMake(width, height);
 }

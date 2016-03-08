@@ -15,10 +15,6 @@
 @property (nonatomic, assign) CGRect         collectionViewBounds;
 @property (nonatomic, assign) CGFloat        contentHeight;
 
-@property (nonatomic, assign) UIEdgeInsets   sectionInset;
-@property (nonatomic, assign) CGFloat        minimumLineSpacing;
-@property (nonatomic, assign) CGFloat        minimumInteritemSpacing;
-
 @property (nonatomic, assign) CGSize         contentSize;
 
 @end
@@ -31,6 +27,10 @@
     if (self) {
         self.cellAttributesList = [NSMutableArray array];
         self.contentHeight = 0;
+        
+        self.minimumInteritemSpacing = 5;
+        self.minimumLineSpacing      = 5;
+        self.sectionInset            = UIEdgeInsetsMake(5, 5, 5, 5);
     }
     
 //    NSLog(@"HKCustomFlowLayout--init");
@@ -43,10 +43,6 @@
     //do custom things
     self.collectionViewBounds = self.collectionView.bounds;
     self.contentHeight = self.collectionViewBounds.size.height;
-    
-    self.minimumInteritemSpacing = 10;
-    self.minimumLineSpacing      = 15;
-    self.sectionInset            = UIEdgeInsetsMake(10, 10, 10, 10);
     
     [self createLayoutAttributes];
 }
