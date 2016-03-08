@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HKTagsViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    HKTagsViewController *tagsVC = [[HKTagsViewController alloc] init];
+    UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:tagsVC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor redColor];
+    
+    [self.window setRootViewController:naviVC];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
